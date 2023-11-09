@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Puasa 2023</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/test.css">
+
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card">
+            <img class="card-img-top" src="images/puasa2023.jpg" alt="puasa">
+            <div id="myDiv" class="card-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script>
+function showDateTime() {
+  var myDiv = document.getElementById("myDiv");
+
+  var date = new Date();
+  var dayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  var dayName = dayList[date.getDay()];
+  var monthName = monthNames[date.getMonth()];
+  var today = `${dayName}, ${monthName} ${date.getDate()}, ${date.getFullYear()}`;
+
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+
+  var time = hour + ":" + min + ":" + sec;
+  myDiv.innerText = `Today is  ${today}. Time is ${time}`;
+}
+setInterval(showDateTime, 1000);
+
+</script>
+</body>
